@@ -80,9 +80,11 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>.\Sources\includes\;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>.\Sources\includes\;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -126,8 +128,9 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>
@@ -145,6 +148,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>
@@ -155,20 +159,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Sources\astroherb.h" />
-    <ClInclude Include="Sources\celestial_body.h" />
-    <ClInclude Include="Sources\mathlib.h" />
-    <ClInclude Include="Sources\moon.h" />
-    <ClInclude Include="Sources\observed_body.h" />
-    <ClInclude Include="Sources\sun.h" />
-    <ClInclude Include="Sources\astro_time.h" />
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="Sources\celestial_body.cpp" />
     <ClCompile Include="Sources\moon.cpp" />
     <ClCompile Include="Sources\observed_body.cpp" />
     <ClCompile Include="Sources\sun.cpp" />
     <ClCompile Include="Sources\astro_time.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Sources\includes\astroherb.h" />
+    <ClInclude Include="Sources\includes\astro_time.h" />
+    <ClInclude Include="Sources\includes\celestial_body.h" />
+    <ClInclude Include="Sources\includes\mathlib.h" />
+    <ClInclude Include="Sources\includes\moon.h" />
+    <ClInclude Include="Sources\includes\observed_body.h" />
+    <ClInclude Include="Sources\includes\sun.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

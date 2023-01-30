@@ -25,7 +25,7 @@ double Celestial_body::eccentric_anomaly()
 		double E1 = E0;
 
 		// Iterate over, until error would be acceptable
-		for (int it = 0; it<10; ++it) {
+		for (int it = 0; it<max_iterations; ++it) {
 			E1 = E0-(E0-radeg*e*sind(E0)-M)/(1-e*cosd(E0));
 			if (fabs(E1-E0)<eps) {
 				break;
