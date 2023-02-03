@@ -1,6 +1,6 @@
-#include <iostream>
-
 #include "celestial_body.h"
+
+#include <iostream>
 
 using namespace Astro_herb;
 
