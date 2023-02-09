@@ -22,7 +22,7 @@ namespace Astro_herb
 	static constexpr double epsilon = 0.000001;
 	static constexpr double radeg = 180.0/pi;
 	static constexpr double degrad = pi/180.0;
-	static constexpr double earth_radii_to_au = 1/23450;
+	static constexpr double earth_radii_to_au = 1.0/23450.0;
 
 	/**
 	* Angle normalization for trigonometric functions
